@@ -1,5 +1,5 @@
 .DS_Store
 netbooks/.ipynb_checkpoints
 private/
-data/
+*.csv
 netbooks/netZooPy/.ipynb_checkpoints/
