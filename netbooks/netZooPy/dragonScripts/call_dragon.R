@@ -1,7 +1,7 @@
 call.GGM <- function(X){
   npySave("../data/X.npy", X)
   p <- ncol(X)
-  system('python3 apply_GGM.py', wait=TRUE) 
+  system('python3 dragonScripts/apply_GGM.py', wait=TRUE) 
   par.cor <- npyLoad("../data/par_cor.npy")
   adj_p_vals <- npyLoad("../data/adj_p_vals.npy")
   p_vals <- npyLoad("../data/p_vals.npy")
@@ -29,7 +29,7 @@ call.dragon <- function(XA, XB){
   pA <- ncol(XA)
   npySave("../data/XB.npy", XB)
   pB <- ncol(XB)
-  system('python3 apply_DRAGON.py', wait=TRUE) 
+  system('python3 dragonScripts/apply_DRAGON.py', wait=TRUE) 
   par.cor <- npyLoad("../data/par_cor.npy")
   adj_p_vals <- npyLoad("../data/adj_p_vals.npy")
   p_vals <- npyLoad("../data/p_vals.npy")
