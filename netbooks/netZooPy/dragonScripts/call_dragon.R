@@ -1,5 +1,5 @@
 call.GGM <- function(X){
-  npySave("../../data/X.npy", X)
+  npySave("../data/X.npy", X)
   p <- ncol(X)
   system('python3 apply_GGM.py', wait=TRUE) 
   par.cor <- npyLoad("../../data/par_cor.npy")
