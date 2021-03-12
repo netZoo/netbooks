@@ -27,7 +27,7 @@ call.GGM <- function(X){
 call.dragon <- function(XA, XB){
   npySave("../data/XA.npy", XA)
   pA <- ncol(XA)
-  npySave("../../data/XB.npy", XB)
+  npySave("../data/XB.npy", XB)
   pB <- ncol(XB)
   system('python3 apply_DRAGON.py', wait=TRUE) 
   par.cor <- npyLoad("../../data/par_cor.npy")
