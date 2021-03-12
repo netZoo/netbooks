@@ -24,7 +24,7 @@ lams, _ = estimate_penalty_parameters_dragon(XA, XB)
 print('lambdas = ',lams)
 
 r = get_partial_correlation_dragon(XA, XB, lams)
-np.save("par_cor.npy", r)
+np.save("../../data/par_cor.npy", r)
 
 adj_p_vals, p_vals = estimate_p_values_dragon(r, n, pA, pB, lams)
 np.save("../../data/adj_p_vals.npy", adj_p_vals)
