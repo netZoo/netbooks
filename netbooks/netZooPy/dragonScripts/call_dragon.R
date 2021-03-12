@@ -25,7 +25,7 @@ call.GGM <- function(X){
 
 
 call.dragon <- function(XA, XB){
-  npySave("../../data/XA.npy", XA)
+  npySave("../data/XA.npy", XA)
   pA <- ncol(XA)
   npySave("../../data/XB.npy", XB)
   pB <- ncol(XB)
