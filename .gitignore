@@ -2,8 +2,13 @@
 netbooks/.ipynb_checkpoints
 private/
 *.csv
+*.rds
+*.txt
+*.rdata
+*.gmt
 netbooks/netZooPy/.ipynb_checkpoints/
 netbooks/data/genes.txt
 netbooks/data/h.all.v6.1.symbols.gmt
 netbooks/netZooR/.ipynb_checkpoints/
 paper/
+netbooks/netZooPy/continuous_motif_priors_KRCC-Copy1.ipynb
