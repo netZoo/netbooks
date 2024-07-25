@@ -7,7 +7,7 @@ These use cases span gene regulatory network inference and reconstruction, commu
 ## Technical consideration
 The webserver is built using [Jupyter Hub](https://jupyter.org/hub) and includes R and Python kernels.
 
-You can access Netbooks through the [web interface](http://netbooks.networkmedicine.org), or you can clone [this GitHub](https://github.com/netZoo/netbooks) repository to run the 
+You can access Netbooks through the [web interface](https://netbooks.networkmedicine.org), or you can clone [this GitHub](https://github.com/netZoo/netbooks) repository to run the 
 notebooks on your machine.
 
 On the webserver, you can create new cells in each notebook to do extra analysis on specific use case, however, please make sure to save your work before closing the session, otherwise the work is lost.
