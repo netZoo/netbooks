@@ -11,7 +11,7 @@ c = get_config()  #noqa
 # Define proxy and authenticator parameters
 c.ConfigurableHTTPProxy.command = '/home/vagrant/miniforge3/bin/configurable-http-proxy'
 c.JupyterHub.authenticator_class = "shared-password"
-c.SharedPasswordAuthenticator.user_password = "my-workshop-2042"
+c.SharedPasswordAuthenticator.user_password = "my-password"
 # Use the following code for GitHub authentication
 #c.JupyterHub.authenticator_class = 'oauthenticator.LocalGitHubOAuthenticator'
 #c.GithubOAuthenticator.oauth_callback_url = 'https://myurl.org/hub/oauth_callback'
@@ -35,7 +35,7 @@ c.Authenticator.delete_invalid_users = True
 #c.JupyterHub.spawner_class = systemdspawner.SystemdSpawner
 #c.SystemdSpawner.dynamic_users = True
 #c.SystemdSpawner.unit_extra_properties = {'RuntimeDirectoryPreserve': 'no'}
-#c.Spawner.default_url = '/home/vagrant/netbooks/netbooks/Welcome_to_netBooks.ipynb'
+c.Spawner.default_url = 'lab/workspaces/auto-V/tree/netbooks/netbooks/Welcome_to_netBooks.ipynb'
 #c.SystemdSpawner.disable_user_sudo = True
 #c.SystemdSpawner.readonly_paths = ['/']
 #c.SystemdSpawner.isolate_tmp = True
@@ -74,7 +74,7 @@ def create_dir_hook(spawner):
 
 # attach the hook function to the spawner
 #c.Spawner.pre_spawn_hook = create_dir_hook
-c.Spawner.cmd = '/home/vagrant/miniforge3//bin/jupyterhub-singleuser'
+c.Spawner.cmd = '/home/vagrant/miniforge3/bin/jupyterhub-singleuser'
 
 # Idle process management
 '''
