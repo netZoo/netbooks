@@ -9,16 +9,18 @@ from io import StringIO
 c = get_config()  #noqa
 
 # Define proxy and authenticator parameters
-c.ConfigurableHTTPProxy.command = '/home/vagrant/miniforge3/envs/notebooks2/bin/configurable-http-proxy'
+c.ConfigurableHTTPProxy.command = '/home/vagrant/miniforge3/bin/configurable-http-proxy'
 c.JupyterHub.authenticator_class = "shared-password"
 c.SharedPasswordAuthenticator.user_password = "my-workshop-2042"
+# Use the following code for GitHub authentication
 #c.JupyterHub.authenticator_class = 'oauthenticator.LocalGitHubOAuthenticator'
-#c.GithubOAuthenticator.oauth_callback_url = 'https://netbooks.networkmedicine.org/hub/oauth_callback'
+#c.GithubOAuthenticator.oauth_callback_url = 'https://myurl.org/hub/oauth_callback'
 
 # Fetch user list
+#use following code for reading a list of users from the cloud
 #client = boto3.client('s3')
-#bucket_name = 'netzoo'
-#object_key = 'netbooks/netbooks_allowed_users.csv'
+#bucket_name = 'mybucket'
+#object_key = 'my_allowed_users.csv'
 #csv_obj = client.get_object(Bucket=bucket_name, Key=object_key)
 #body = csv_obj['Body']
 #csv_string = body.read().decode('utf-8')
@@ -30,7 +32,7 @@ c.LocalAuthenticator.create_system_users = True
 c.Authenticator.delete_invalid_users = True
 
 # Define spawner parameters
-c.JupyterHub.spawner_class = systemdspawner.SystemdSpawner
+#c.JupyterHub.spawner_class = systemdspawner.SystemdSpawner
 #c.SystemdSpawner.dynamic_users = True
 #c.SystemdSpawner.unit_extra_properties = {'RuntimeDirectoryPreserve': 'no'}
 #c.Spawner.default_url = '/home/vagrant/netbooks/netbooks/Welcome_to_netBooks.ipynb'
@@ -39,14 +41,14 @@ c.JupyterHub.spawner_class = systemdspawner.SystemdSpawner
 #c.SystemdSpawner.isolate_tmp = True
 #c.SystemdSpawner.isolate_devices = True
 #c.JupyterHub.template_paths = ['/etc/jupyterhub/templates/']
-c.Spawner.environment = {
-  'CMDSTAN': '/home/ubuntu/.cmdstan/cmdstan-2.34.1'
-}
+#c.Spawner.environment = {
+#  'myvar': '/my/home/path'
+#}
 
 # Define HTTPS access
 #c.JupyterHub.port = 443
-#c.JupyterHub.ssl_key = '/etc/letsencrypt/live/netbooks.networkmedicine.org/privkey.pem'
-#c.JupyterHub.ssl_cert = '/etc/letsencrypt/live/netbooks.networkmedicine.org/fullchain.pem'
+#c.JupyterHub.ssl_key = '/etc/letsencrypt/live/myurl.org/privkey.pem'
+#c.JupyterHub.ssl_cert = '/etc/letsencrypt/live/myurl.org/fullchain.pem'
 
 import shutil, pwd, grp, distutils
 from subprocess import check_call
@@ -72,7 +74,7 @@ def create_dir_hook(spawner):
 
 # attach the hook function to the spawner
 #c.Spawner.pre_spawn_hook = create_dir_hook
-c.Spawner.cmd = '/home/vagrant/miniforge3/envs/notebooks2/bin/jupyterhub-singleuser' #['jupyterhub-singleuser']
+c.Spawner.cmd = '/home/vagrant/miniforge3//bin/jupyterhub-singleuser'
 
 # Idle process management
 '''
