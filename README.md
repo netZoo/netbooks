@@ -14,5 +14,20 @@ On the webserver, you can create new cells in each notebook to do extra analysis
 
 If you are intrested in having a permanent user space, consider uploading the notebooks to [google colab](https://colab.research.google.com/notebooks/intro.ipynb#recent=true).
 
+## Deploying a JupyterHub server
+
+We provide a Vagrant recipe to deploy a JupyterHub server on Ubuntu 22.04 using Netbooks as an example. To do so, you'd need to install [vagrant](https://developer.hashicorp.com/vagrant) and [virtualbox](https://www.virtualbox.org/) and follow these steps:
+```
+git clone https://github.com/netZoo/netbooks.git
+
+cd netbooks/vagrant
+
+vagrant up
+
+vagrant ssh
+
+jupyterhub
+```
+
 ## Issues
 If you have any issue or suggestion, please open an [issue](https://github.com/netZoo/netbooks/issues) in the GitHub repository.
