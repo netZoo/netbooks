@@ -1,0 +1,16 @@
+# Environment for: netbooks/netZooPy/Building_single-sample_regulatory_networks_using_LIONESS_and_netZooPy.ipynb
+# Kernel name: pv2  |  display: PV2  |  language: python
+# Build hint: clone pp5, then `mamba install` extras below.
+# Post-install steps (run inside the env):
+#   pip install netZooPy
+
+name: pv2
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.10
+  - ipykernel
+  - jupyter
+  - pip

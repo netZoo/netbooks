@@ -1,0 +1,16 @@
+# Environment for: netbooks/netZooPy/dragon_mirna.ipynb
+# Kernel name: pp2  |  display: PP2  |  language: python
+# Build hint: clone pp5, then `mamba install` extras below.
+# Post-install steps (run inside the env):
+#   pip install netZooPy
+
+name: pp2
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.10
+  - ipykernel
+  - jupyter
+  - pip

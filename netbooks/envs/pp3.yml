@@ -1,0 +1,17 @@
+# Environment for: netbooks/netZooPy/drug_repurposing_colon_cancer.ipynb
+# Kernel name: pp3  |  display: PP3  |  language: python
+# Build hint: clone pp5, then `mamba install` extras below.
+# Post-install steps (run inside the env):
+#   pip install netZooPy
+
+name: pp3
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.10
+  - ipykernel
+  - jupyter
+  - pip
+  - networkx

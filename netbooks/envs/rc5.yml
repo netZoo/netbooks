@@ -1,0 +1,23 @@
+# Environment for: netbooks/netZooR/gene_expression_for_coexpression_nets.ipynb
+# Kernel name: rc5  |  display: RC5  |  language: R
+# Build hint: clone rv9, then `mamba install` extras below.
+# Post-install steps (run inside the env):
+#   R -e 'remotes::install_github("netZoo/netZooR", upgrade="never")'
+
+name: rc5
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - r-base=4.3.1
+  - r-irkernel
+  - jupyter
+  - r-remotes
+  - r-devtools
+  - r-biocmanager
+  - bioconductor-deseq2
+  - bioconductor-summarizedexperiment
+  - bioconductor-limma
+  - bioconductor-recount
+  - bioconductor-vsn

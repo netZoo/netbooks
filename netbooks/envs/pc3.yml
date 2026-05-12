@@ -1,0 +1,17 @@
+# Environment for: netbooks/netZooPy/continuous_motif_priors_KRCC.ipynb
+# Kernel name: pc3  |  display: PC3  |  language: python
+# Build hint: clone pp5, then `mamba install` extras below.
+# Post-install steps (run inside the env):
+#   pip install netZooPy
+
+name: pc3
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.10
+  - ipykernel
+  - jupyter
+  - pip
+  - scikit-learn

@@ -1,0 +1,23 @@
+# Environment for: netbooks/netZooR/TutorialOTTER.ipynb
+# Kernel name: rc2  |  display: RC2  |  language: R
+# Build hint: clone rv9, then `mamba install` extras below.
+# Post-install steps (run inside the env):
+#   R -e 'remotes::install_github("netZoo/netZooR", upgrade="never")'
+
+name: rc2
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - r-base=4.3.1
+  - r-irkernel
+  - jupyter
+  - r-remotes
+  - r-devtools
+  - r-biocmanager
+  - r-data.table
+  - r-ggplot2
+  - r-reshape2
+  - r-visnetwork
+  - bioconductor-fgsea

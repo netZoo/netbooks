@@ -1,0 +1,29 @@
+# Environment for: netbooks/netZooR/maize_genome.ipynb
+# Kernel name: rp7  |  display: RP7  |  language: R
+# Build hint: clone rv9, then `mamba install` extras below.
+# Post-install steps (run inside the env):
+#   R -e 'remotes::install_github("netZoo/netZooR", upgrade="never")'
+
+name: rp7
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - r-base=4.3.1
+  - r-irkernel
+  - jupyter
+  - r-remotes
+  - r-devtools
+  - r-biocmanager
+  - r-rcolorbrewer
+  - r-data.table
+  - r-ggplot2
+  - r-igraph
+  - r-purrr
+  - r-tidyr
+  - r-umap
+  - bioconductor-iranges
+  - bioconductor-limma
+  - bioconductor-topgo
+  - bioconductor-rgraphviz
