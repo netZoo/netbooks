@@ -19,6 +19,7 @@ Local-development users running netbooks via Vagrant should look at
 | `le-restart-jupyterhub.sh` | `/etc/letsencrypt/renewal-hooks/deploy/restart-jupyterhub.sh` |
 | `journald-netbooks.conf` | `/etc/systemd/journald.conf.d/netbooks.conf` (2 GB cap on journal disk usage) |
 | `logrotate-jupyterhub` | `/etc/logrotate.d/jupyterhub` (rotates `/home/ubuntu/jupyterhub.log` weekly, `/var/log/jupyterhub-backup.log` monthly) |
+| `clean_stale_singleuser_dirs.sh` | `/usr/local/bin/clean_stale_singleuser_dirs.sh` (sweeps stale `/run/jupyter-*-singleuser` from old sessions; wired as `ExecStartPre=` on the systemd unit) |
 | `.netbooks_env.example` | template for `/home/ubuntu/.netbooks_env` (root:root 0400) |
 
 ## Operational basics

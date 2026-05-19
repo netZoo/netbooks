@@ -12,6 +12,7 @@ Environment=HOME=/home/ubuntu
 Environment=AWS_SHARED_CREDENTIALS_FILE=/home/ubuntu/.aws/credentials
 Environment=AWS_CONFIG_FILE=/home/ubuntu/.aws/config
 Environment=AWS_DEFAULT_REGION=us-east-1
+ExecStartPre=/usr/local/bin/clean_stale_singleuser_dirs.sh
 ExecStart=/opt/conda/envs/jhub5/bin/jupyterhub -f /home/ubuntu/jupyterhub_config.py
 Restart=on-failure
 RestartSec=5
