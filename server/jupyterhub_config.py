@@ -75,7 +75,8 @@ except Exception:
     pass
 # --- end cached allowlist patch ---
 c.Authenticator.admin_users={'marouenbg','dkdeconti'}
-c.LocalAuthenticator.create_system_users = True
+# Dropped 2026-05-19: SystemdSpawner.dynamic_users=True handles ephemeral users; no real Linux user needed.
+# c.LocalAuthenticator.create_system_users = True
 c.Authenticator.delete_invalid_users = True
 
 # Define spawner parameters

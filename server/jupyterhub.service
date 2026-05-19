@@ -12,7 +12,7 @@ Environment=HOME=/home/ubuntu
 Environment=AWS_SHARED_CREDENTIALS_FILE=/home/ubuntu/.aws/credentials
 Environment=AWS_CONFIG_FILE=/home/ubuntu/.aws/config
 Environment=AWS_DEFAULT_REGION=us-east-1
-ExecStart=/opt/conda/envs/netbooks/bin/jupyterhub -f /home/ubuntu/jupyterhub_config.py
+ExecStart=/opt/conda/envs/jhub5/bin/jupyterhub -f /home/ubuntu/jupyterhub_config.py
 Restart=on-failure
 RestartSec=5
 # Pre-stop kill of orphan proxies (in case of a hard kill, port 8001 stays occupied)
