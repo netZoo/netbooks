@@ -1,0 +1,9 @@
+# Copy to /home/ubuntu/.netbooks_env on the production host, fill in the
+# values from the GitHub OAuth app, then:
+#
+#   sudo chown root:root /home/ubuntu/.netbooks_env
+#   sudo chmod 400 /home/ubuntu/.netbooks_env
+#
+# The systemd unit (jupyterhub.service) loads this via EnvironmentFile=.
+GITHUB_CLIENT_ID=
+GITHUB_CLIENT_SECRET=

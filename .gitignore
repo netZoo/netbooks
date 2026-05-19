@@ -14,3 +14,6 @@ paper/
 netbooks/netZooPy/continuous_motif_priors_KRCC-Copy1.ipynb
 .claude/
 .netbooks_meta/
+# Live secrets — never commit (server/.netbooks_env.example is the template)
+.netbooks_env
+server/.netbooks_env
