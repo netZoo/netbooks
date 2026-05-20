@@ -15,7 +15,8 @@ Local-development users running netbooks via Vagrant should look at
 | `jupyterhub_config.py` | `/home/ubuntu/jupyterhub_config.py` |
 | `start_jupyterhub.sh` | `/home/ubuntu/start_jupyterhub.sh` (legacy; superseded by systemd unit but kept for manual debugging) |
 | `add_netbooks_user.sh` | `/usr/local/bin/add_netbooks_user.sh` |
-| `backup_jupyterhub_db.sh` | `/usr/local/bin/backup_jupyterhub_db.sh` (cron `/etc/cron.d/jupyterhub-backup` at 02:30 UTC daily) |
+| `backup_jupyterhub_db.sh` | `/usr/local/bin/backup_jupyterhub_db.sh` (cron `/etc/cron.d/jupyterhub-backup` — **paused 2026-05-19**, uncomment the schedule line to re-enable) |
+| `jupyterhub-backup.cron` | `/etc/cron.d/jupyterhub-backup` |
 | `le-restart-jupyterhub.sh` | `/etc/letsencrypt/renewal-hooks/deploy/restart-jupyterhub.sh` |
 | `journald-netbooks.conf` | `/etc/systemd/journald.conf.d/netbooks.conf` (2 GB cap on journal disk usage) |
 | `logrotate-jupyterhub` | `/etc/logrotate.d/jupyterhub` (rotates `/home/ubuntu/jupyterhub.log` weekly, `/var/log/jupyterhub-backup.log` monthly) |
