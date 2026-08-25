@@ -1,0 +1,4 @@
+# Daily JupyterHub state backup to S3 (jhub-backup-YYYYMMDD-HHMMSS.tgz)
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# 30 2 * * * ubuntu /usr/local/bin/backup_jupyterhub_db.sh  # paused 2026-05-19 — re-enable on second pass

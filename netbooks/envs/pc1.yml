@@ -1,0 +1,16 @@
+# Environment for: netbooks/netZooPy/Controlling_The_Variance_Of_PANDA_Networks.ipynb
+# Kernel name: pc1  |  display: PC1  |  language: python
+# Build hint: clone pp5, then `mamba install` extras below.
+# Post-install steps (run inside the env):
+#   pip install netZooPy
+
+name: pc1
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.10
+  - ipykernel
+  - jupyter
+  - pip

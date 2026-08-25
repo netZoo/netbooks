@@ -1,0 +1,19 @@
+# Environment for: netbooks/netZooR/TIGER.ipynb
+# Kernel name: rv8  |  display: RV8  |  language: R
+# Build hint: clone rv9, then `mamba install` extras below.
+# Post-install steps (run inside the env):
+#   R -e 'remotes::install_github("netZoo/netZooR", upgrade="never")'
+
+name: rv8
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - r-base=4.3.1
+  - r-irkernel
+  - jupyter
+  - r-remotes
+  - r-devtools
+  - r-biocmanager
+  - bioconductor-dorothea

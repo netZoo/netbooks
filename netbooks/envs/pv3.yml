@@ -1,0 +1,16 @@
+# Environment for: netbooks/netZooPy/Up_and_running_with_PANDA_and_netZooPy.ipynb
+# Kernel name: pv3  |  display: PV3  |  language: python
+# Build hint: clone pp5, then `mamba install` extras below.
+# Post-install steps (run inside the env):
+#   pip install netZooPy
+
+name: pv3
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.10
+  - ipykernel
+  - jupyter
+  - pip

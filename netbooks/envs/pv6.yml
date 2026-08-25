@@ -1,0 +1,16 @@
+# Environment for: netbooks/netZooPy/cobra.ipynb
+# Kernel name: pv6  |  display: PV6  |  language: python
+# Build hint: clone pp5, then `mamba install` extras below.
+# Post-install steps (run inside the env):
+#   pip install netZooPy
+
+name: pv6
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.10
+  - ipykernel
+  - jupyter
+  - pip

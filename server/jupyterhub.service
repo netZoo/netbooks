@@ -1,0 +1,27 @@
+[Unit]
+Description=JupyterHub for netbooks.networkmedicine.org
+Documentation=https://jupyterhub.readthedocs.io
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/ubuntu
+EnvironmentFile=/home/ubuntu/.netbooks_env
+Environment=HOME=/home/ubuntu
+Environment=AWS_SHARED_CREDENTIALS_FILE=/home/ubuntu/.aws/credentials
+Environment=AWS_CONFIG_FILE=/home/ubuntu/.aws/config
+Environment=AWS_DEFAULT_REGION=us-east-1
+ExecStartPre=/usr/local/bin/clean_stale_singleuser_dirs.sh
+ExecStart=/opt/conda/envs/jhub5/bin/jupyterhub -f /home/ubuntu/jupyterhub_config.py
+Restart=on-failure
+RestartSec=5
+# Pre-stop kill of orphan proxies (in case of a hard kill, port 8001 stays occupied)
+ExecStopPost=/usr/bin/pkill -9 -f configurable-http-proxy
+# Logs go to journal: `journalctl -u jupyterhub`
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=jupyterhub
+
+[Install]
+WantedBy=multi-user.target

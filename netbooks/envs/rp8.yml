@@ -1,0 +1,30 @@
+# Environment for: netbooks/netZooR/egret_banovich_netbook.ipynb
+# Kernel name: rp8  |  display: RP8  |  language: R
+# Build hint: clone rv9, then `mamba install` extras below.
+# Post-install steps (run inside the env):
+#   R -e 'remotes::install_github("netZoo/netZooR", upgrade="never")'
+
+name: rp8
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - r-base=4.3.1
+  - r-irkernel
+  - jupyter
+  - r-remotes
+  - r-devtools
+  - r-biocmanager
+  - r-dplyr
+  - r-extrafont
+  - r-forcats
+  - r-ggplot2
+  - r-ggpubr
+  - r-ggthemes
+  - r-gridextra
+  - r-jcolors
+  - r-reshape2
+  - r-tidyr
+  - r-xtable
+  - bioconductor-preprocesscore

@@ -1,0 +1,26 @@
+# /etc/logrotate.d/jupyterhub
+# /home/ubuntu/jupyterhub.log is the legacy log from the pre-systemd manual
+# start (see /home/ubuntu/start_jupyterhub.sh). With the unit running, jhub
+# logs to journald instead — but if the helper is ever used for ad-hoc
+# debugging, we still want this rotated.
+/home/ubuntu/jupyterhub.log {
+    weekly
+    rotate 8
+    compress
+    delaycompress
+    missingok
+    notifempty
+    copytruncate
+    create 0644 root root
+}
+
+# /var/log/jupyterhub-backup.log is written by /usr/local/bin/backup_jupyterhub_db.sh
+/var/log/jupyterhub-backup.log {
+    monthly
+    rotate 6
+    compress
+    delaycompress
+    missingok
+    notifempty
+    create 0644 ubuntu ubuntu
+}

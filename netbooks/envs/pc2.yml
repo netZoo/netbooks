@@ -1,0 +1,17 @@
+# Environment for: netbooks/netZooPy/Building_a_regulation_prior_network.ipynb
+# Kernel name: pc2  |  display: PC2  |  language: python
+# Build hint: clone pp5, then `mamba install` extras below.
+# Post-install steps (run inside the env):
+#   pip install netZooPy
+
+name: pc2
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.10
+  - ipykernel
+  - jupyter
+  - pip
+  - biopython
